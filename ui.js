@@ -4,6 +4,11 @@ module.exports = api => {
     description: "Build the project and upload it to skynet",
     link: "https://github.com/Delivator/vue-cli-plugin-skynet"
   })
+  api.describeTask({
+    match: /publish/,
+    description: "Upload to skynet (without building)",
+    link: "https://github.com/Delivator/vue-cli-plugin-skynet"
+  })
 
   api.describeConfig({
     id: "me.delivator.vue-skynet.config",
