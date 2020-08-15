@@ -11,7 +11,7 @@ module.exports = (api) => {
     }
   })
 
-  api.render("./script")
+  api.render("./template")
 
   api.onCreateComplete(() => {
     // adapted from https://github.com/vuetifyjs/vue-cli-plugins/blob/7ffbd824ae1d4731a7e70a65a1db52f7a643e4b6/packages/vue-cli-plugin-vuetify/generator/tools/vuetify.js#L61-79
