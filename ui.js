@@ -1,11 +1,12 @@
 module.exports = api => {
   api.describeTask({
-    match: /deploy/,
+    match: /vue-cli-service build && node deploy_skynet.js/,
     description: "Build the project and upload it to skynet",
     link: "https://github.com/Delivator/vue-cli-plugin-skynet"
   })
+
   api.describeTask({
-    match: /publish/,
+    match: /node deploy_skynet.js"/,
     description: "Upload to skynet (without building)",
     link: "https://github.com/Delivator/vue-cli-plugin-skynet"
   })
@@ -25,9 +26,8 @@ module.exports = api => {
         {
           name: "portal",
           type: "input",
-          message: "Define the color for greeting message",
+          message: "The skynet portal used for deploying",
           value: data.vueSkynetConfig && data.vueSkynetConfig.portal,
-          default: "https://siasky.net",
         }
       ]
     }),
