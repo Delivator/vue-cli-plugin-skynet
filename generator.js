@@ -4,6 +4,9 @@ module.exports = (api) => {
   api.extendPackage({
     dependencies: {
       "@nebulous/skynet": "^1.1.0"
+    },
+    scripts: {
+      deploy: "vue-cli-service build && node deploy_skynet.js"
     }
   })
 
