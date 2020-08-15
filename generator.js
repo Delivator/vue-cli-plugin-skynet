@@ -6,7 +6,8 @@ module.exports = (api) => {
       "@nebulous/skynet": "^1.1.0"
     },
     scripts: {
-      deploy: "vue-cli-service build && node deploy_skynet.js"
+      deploy: "vue-cli-service build && node deploy_skynet.js",
+      publish: "node deploy_skynet.js"
     }
   })
 
@@ -29,5 +30,7 @@ module.exports = (api) => {
     fs.writeFileSync(config, `module.exports = ${JSON.stringify(file, 2, 2)}`, "utf8")
 
     api.exitLog("Installed vue-cli-plugin-skynet")
+    api.exitLog('To deploy your app (build and upload) you can use "npm run deploy"')
+    api.exitLog('To upload your app (without building) you can use "npm run publish"')
   })
 }
