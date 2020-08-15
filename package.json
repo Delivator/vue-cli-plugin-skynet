@@ -1,0 +1,26 @@
+{
+  "name": "vue-cli-plugin-skynet",
+  "version": "1.0.0",
+  "description": "Vue CLI plugin for deploying apps to Sia Skynet.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Delivator/vue-cli-plugin-skynet.git"
+  },
+  "keywords": [
+    "skynet",
+    "vue",
+    "vue-cli",
+    "vue-cli-plugin",
+    "siasky"
+  ],
+  "author": "Delivator",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Delivator/vue-cli-plugin-skynet/issues"
+  },
+  "homepage": "https://github.com/Delivator/vue-cli-plugin-skynet#readme"
+}
