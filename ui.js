@@ -11,19 +11,27 @@ module.exports = api => {
     description: "The skynet portal that should be used for uploading",
     link: "https://github.com/Delivator/vue-cli-plugin-skynet",
     files: {
-      "vue-skynet_config.js": {
+      vueSkynetConfig: {
         js: ["vue-skynet_config.js"]
       }
     },
     onRead: ({ data }) => ({
       prompts: [
         {
-          name: `portal`,
+          name: "portal",
           type: "input",
           message: "Define the color for greeting message",
-          value: "https://skyportal.xyz"
+          value: data.vueSkynetConfig && data.vueSkynetConfig.portal,
+          default: "https://siasky.net",
         }
       ]
-    })
+    }),
+    onWrite: async ({ api, prompts }) => {
+      const result = {}
+      for (const prompt of prompts) {
+        result[`${prompt.id}`] = await api.getAnswer(prompt.id)
+      }
+      api.setData("vueSkynetConfig", result)
+    }
   })
 }
