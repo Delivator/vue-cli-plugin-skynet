@@ -6,7 +6,7 @@ module.exports = api => {
   })
 
   api.describeTask({
-    match: /node deploy_skynet.js"/,
+    match: /node deploy_skynet.js/,
     description: "Upload to skynet (without building)",
     link: "https://github.com/Delivator/vue-cli-plugin-skynet"
   })
