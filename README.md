@@ -1,5 +1,7 @@
 # Vue CLI plugin for deploying apps on [Sia Skynet](https://siasky.net/).
 
+### [How to deploy a Vue app on Skynet in under a minute](https://skyportal.xyz/AACSfPcMcOlCkIEzWyty1kkAzP4go75nL8i4FJRB0C-kpA) (Video)
+
 Requirements:
 - [Vue CLI](https://cli.vuejs.org/guide/installation.html)
 
