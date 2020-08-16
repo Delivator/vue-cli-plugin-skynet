@@ -2,7 +2,7 @@ const fs = require("fs")
 
 module.exports = (api) => {
   api.extendPackage({
-    dependencies: {
+    "devDependencies": {
       "@nebulous/skynet": "^1.1.0"
     },
     scripts: {

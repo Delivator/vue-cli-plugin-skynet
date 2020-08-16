@@ -14,7 +14,7 @@ module.exports = api => {
   api.describeConfig({
     id: "me.delivator.vue-skynet.config",
     name: "Skynet",
-    description: "The skynet portal that should be used for uploading",
+    description: "Change skynet settings",
     link: "https://github.com/Delivator/vue-cli-plugin-skynet",
     files: {
       vueSkynetConfig: {
