@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-skynet",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vue CLI plugin for deploying apps to Sia Skynet.",
   "main": "index.js",
   "scripts": {

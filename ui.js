@@ -27,10 +27,31 @@ module.exports = api => {
           name: "portal",
           type: "input",
           message: "The skynet portal used for deploying",
-          value: data.vueSkynetConfig && data.vueSkynetConfig.portal,
           default: "https://siasky.net"
+        },
+        {
+          name: "enableNamebase",
+          type: "confirm",
+          message: "Enable the namebase/handshake integration",
+          default: false,
+          description: "If enabled it will try to automatically update your handshake domain with your latest SKApp",
+        },
+        {
+          name: "namebaseDomain",
+          type: "input",
+          message: "Your Namebase Domain",
+        },
+        {
+          name: "namebaseAccessKey",
+          type: "input",
+          message: "Your Namebase access key",
+        },
+        {
+          name: "namebaseAPIKey",
+          type: "input",
+          message: "Your Namebase API key",
         }
-      ]
+      ],
     }),
     onWrite: async ({ api, prompts }) => {
       const result = {}
