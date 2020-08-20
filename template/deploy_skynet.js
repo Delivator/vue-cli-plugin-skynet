@@ -1,7 +1,6 @@
 const skynet = require("@nebulous/skynet")
 const config = require("./vue-skynet_config")
 const fetch = require("node-fetch")
-const { namebaseAPIKey } = require("./vue-skynet_config")
 
 const path = "./dist"
 
@@ -11,7 +10,7 @@ opts.portalUrl = config.portal
 console.log(`Uploading ${path} to ${config.portal}`)
 
 function updateNamebaseDomain(skylink) {
-  const credentials = Buffer.from(`${config.namebaseAPIKey}:${namebaseAPISecret}`);
+  const credentials = Buffer.from(`${config.namebaseAPIKey}:${config.namebaseAPISecret}`);
   const encodedCredentials = credentials.toString("base64");
   const authorization = `Basic ${encodedCredentials}`;
 
