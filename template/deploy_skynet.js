@@ -41,7 +41,6 @@ function updateNamebaseDomain(skylink) {
 
   fetch(`https://namebase.io/api/v0/dns/domains/${config.namebaseDomain}`, requestOptions)
     .then(response => {
-      console.log(response)
       return response.json()
     })
     .then(json => {
@@ -65,6 +64,9 @@ skynet
   .then((resp) => {
     const skylink = resp.replace("sia://", "")
     console.log(`Done: ${config.portal}/${skylink}/`)
-    if (config.enableNamebase) updateNamebaseDomain(skylink)
+    if (config.enableNamebase) {
+      console.log(`Updating "${config.namebaseDomain}"'s TXT record to ${skylink}...`)
+      updateNamebaseDomain(skylink)
+    }
   })
   .catch((err) => console.error(err.message))
