@@ -18,7 +18,7 @@ module.exports = api => {
     link: "https://github.com/Delivator/vue-cli-plugin-skynet",
     files: {
       vueSkynetConfig: {
-        js: ["vue-skynet_config.js"]
+        json: ["vue-skynet_config.json"]
       }
     },
     onRead: ({ data }) => ({
@@ -27,7 +27,8 @@ module.exports = api => {
           name: "portal",
           type: "input",
           message: "The skynet portal used for deploying",
-          default: "https://siasky.net"
+          default: "https://siasky.net",
+          value: data.vueSkynetConfig && data.vueSkynetConfig.portal,
         },
         {
           name: "enableNamebase",
@@ -35,21 +36,28 @@ module.exports = api => {
           message: "Enable the namebase/handshake integration",
           default: false,
           description: "If enabled it will try to automatically update your handshake domain with your latest SKApp",
+          value: data.vueSkynetConfig && data.vueSkynetConfig.enableNamebase,
         },
         {
           name: "namebaseDomain",
           type: "input",
           message: "Your Namebase Domain",
-        },
-        {
-          name: "namebaseAccessKey",
-          type: "input",
-          message: "Your Namebase access key",
+          default: "",
+          value: data.vueSkynetConfig && data.vueSkynetConfig.namebaseDomain,
         },
         {
           name: "namebaseAPIKey",
           type: "input",
           message: "Your Namebase API key",
+          default: "",
+          value: data.vueSkynetConfig && data.vueSkynetConfig.namebaseAPIKey,
+        },
+        {
+          name: "namebaseAPISecret",
+          type: "input",
+          message: "Your Namebase API Secret",
+          default: "",
+          value: data.vueSkynetConfig && data.vueSkynetConfig.namebaseAPISecret,
         }
       ],
     }),
