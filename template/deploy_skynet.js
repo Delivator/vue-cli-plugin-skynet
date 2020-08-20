@@ -11,7 +11,7 @@ opts.portalUrl = config.portal
 console.log(`Uploading ${path} to ${config.portal}`)
 
 function updateNamebaseDomain(skylink) {
-  const credentials = Buffer.from(`${config.namebaseAccessKey}:${namebaseAPIKey}`);
+  const credentials = Buffer.from(`${config.namebaseAPIKey}:${namebaseAPISecret}`);
   const encodedCredentials = credentials.toString("base64");
   const authorization = `Basic ${encodedCredentials}`;
 

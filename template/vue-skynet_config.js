@@ -3,5 +3,5 @@ module.exports = {
   enableNamebase: false,
   namebaseDomain: "",
   namebaseAPIKey: "",
-  namebaseAccessKey: ""
+  namebaseAPISecret: ""
 }
