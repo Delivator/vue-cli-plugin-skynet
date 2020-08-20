@@ -65,7 +65,7 @@ skynet
     const skylink = resp.replace("sia://", "")
     console.log(`Done: ${config.portal}/${skylink}/`)
     if (config.enableNamebase) {
-      console.log(`Updating "${config.namebaseDomain}"'s TXT record to ${skylink}...`)
+      console.log(`Updating TXT record of ${config.namebaseDomain} to ${skylink}`)
       updateNamebaseDomain(skylink)
     }
   })
