@@ -15,7 +15,7 @@ This should add the npm scripts `deploy` and `publish`, edit the `vue.config.js`
 
 ## Configuration
 
-In the `vue-skynet_config.js` file you can set a skynet portal url that will be used for uploads.
+In the `vue-skynet_config.js` file you can set a skynet portal and enable the Handshake/Namebase integration.
 
 This can also be changed in the vue ui.
 

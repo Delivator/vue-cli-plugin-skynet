@@ -1,7 +1,7 @@
 {
   "name": "vue-cli-plugin-skynet",
   "version": "1.0.1",
-  "description": "Vue CLI plugin for deploying apps to Sia Skynet.",
+  "description": "Vue CLI plugin for deploying apps to Sia Skynet with Namebase integration.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,7 +15,9 @@
     "vue",
     "vue-cli",
     "vue-cli-plugin",
-    "siasky"
+    "siasky",
+    "handshake",
+    "namebase"
   ],
   "author": "Delivator",
   "license": "MIT",
