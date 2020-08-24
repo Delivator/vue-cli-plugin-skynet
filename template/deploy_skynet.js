@@ -23,7 +23,7 @@ function updateNamebaseDomain(skylink) {
       { 
         type: "TXT",
         host: "",
-        value: skylink,
+        value: `sia://${skylink}/`,
         ttl: 0
       }
     ]
