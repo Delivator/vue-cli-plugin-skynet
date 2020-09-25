@@ -10,6 +10,7 @@ opts.portalUrl = config.portal
 console.log(`Uploading ${path} to ${config.portal}`)
 
 function updateNamebaseDomain(skylink) {
+  console.log(`Updating TXT record of ${config.namebaseDomain} to sia://${skylink}`)
   if (!config.namebaseDomain) return console.error("config.namebaseDomain cannot be empty")
   if (!config.namebaseAPIKey) return console.error("config.namebaseAPIKey cannot be empty")
   if (!config.namebaseAPISecret) return console.error("config.namebaseAPISecret cannot be empty")
@@ -65,7 +66,6 @@ skynet
     const skylink = resp.replace("sia://", "")
     console.log(`Done: ${config.portal}/${skylink}/`)
     if (config.enableNamebase) {
-      console.log(`Updating TXT record of ${config.namebaseDomain} to ${skylink}`)
       updateNamebaseDomain(skylink)
     }
   })
