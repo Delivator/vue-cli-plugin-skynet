@@ -1,5 +1,8 @@
 # Vue CLI plugin for deploying apps on [Sia Skynet](https://siasky.net/) (With Namebase integration).
 
+<a href="https://www.npmjs.com/package/vue-cli-plugin-skynet" target="_blank" rel="noopener noreferrer">![npm](https://img.shields.io/npm/v/vue-cli-plugin-skynet)</a>
+<a href="https://www.npmjs.com/package/vue-cli-plugin-skynet" target="_blank" rel="noopener noreferrer">![npm](https://img.shields.io/npm/dt/vue-cli-plugin-skynet)</a>
+
 ### Demo: [How to deploy a Vue app on Skynet in under a minute!](https://skyportal.xyz/AACSfPcMcOlCkIEzWyty1kkAzP4go75nL8i4FJRB0C-kpA) (Video)
 
 ![Vue-UI Skynet Deploy](https://skyportal.xyz/dABnWWJH4L7Fa58yiqJxe1K-rbVwelByYJ0BLSqvYEi0hQ/)
