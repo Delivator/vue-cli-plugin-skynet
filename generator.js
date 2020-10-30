@@ -3,8 +3,10 @@ const fs = require("fs")
 module.exports = (api) => {
   api.extendPackage({
     devDependencies: {
-      "@nebulous/skynet": "^1.1.0",
-      "node-fetch": "^2.6.0"
+      "@nebulous/skynet": "^2.0.1",
+      "node-fetch": "^2.6.0",
+      "base64-js": "^1.3.1",
+      "base32-encode": "^1.1.1",
     },
     scripts: {
       deploy: "vue-cli-service build && node deploy_skynet.js",
